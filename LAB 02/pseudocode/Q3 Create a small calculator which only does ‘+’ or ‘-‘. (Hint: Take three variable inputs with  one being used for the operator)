@@ -1,0 +1,15 @@
+Start
+ Input opp, num1, num2
+ Read opp, num1, num2
+ if opp = '+' then
+  Result = num1 + num2
+  Print Result
+ else 
+    if (opp = '-')
+    Result = num1 - num2
+    Print Result
+    else
+     Print "Invalid Operator, kindly retry"
+    End
+  End
+End
