@@ -1,0 +1,9 @@
+Input 'num1' and 'num2' 
+Input operator 'opp' 
+If opp is not equal  to ('+', '-', '*', '/', '%'), then print "invalid operator, please retry", and repeat line 2
+If opp is '+' then set output = num1 + num2.
+else if opp is '-' then set output = num1 - num2
+else if opp is '%' then set output = num1 % num2
+else if opp is '*' then set output = num1 * num2
+else if opp is '/' then set output = num1 / num2
+Print output
