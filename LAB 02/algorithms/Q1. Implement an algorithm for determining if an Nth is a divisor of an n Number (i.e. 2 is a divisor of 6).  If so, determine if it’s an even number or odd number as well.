@@ -1,0 +1,5 @@
+Get number from user
+Get divisor from user
+Calculate remainder by remainder = (number % divisor)
+If the remainder is 0 then print "this number IS a divisor", else print "this number IS NOT  a divisor"
+to check even/odd if remainder for (number%2) is 0 then print "number is even", else print "number is odd"
