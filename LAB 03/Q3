@@ -1,4 +1,9 @@
 int main(){
   int TR;
   int salary;
-  
+  int hours;
+  int perhour;
+  int results;
+  totalsalary = (hours*perhour);
+  results = (totalsalary%TR)
+  if results = 
