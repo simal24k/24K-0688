@@ -1,14 +1,14 @@
-#include<stdio.h>
+#include<iostream>
+using namespace std;
+
 int main(){
- int num1;
- int num2;
- int nnum1;
- int nnum2;
-scanif("%d", &num1);
-scanif("%d," &num2);
-nnum1 = ((num1*0)+num2);
-nnum2 = ((num2*0)+num1);
-printf("now num1 = %d", nnum1);
-printf("now num2 = %d", nnum2);
+int num1;
+int num2;
+printf("enter first number");
+scanf("%d", &num1);
+printf("enter second number");
+scanf("%d", &num2);
+printf("now number 1 is %d and number 2 is %d",num2,num1);
+
 return 0;
 }
