@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+int fuelaverage;
+int distance;
+float price1;
+float price2;
+float totalprice;
+float totallitre;
+price1 = 118;
+price2 = 123;
+distance = 1207;
+printf("enter car fuel average");
+scanf("%d",&fuelaverage);
+
+if ( fuelaverage > 0) {
+totalprice = (((distance/fuelaverage)*price1) + ((distance/fuelaverage)*price2));
+totallitre = ((distance*2)/fuelaverage);
+printf("the total fuel cost is %f", totalprice);
+printf("the total fuel litres consumed are %f", totallitre);
+}
+else 
+{printf("incorrect input, please try again");}
+
+return 0;
+}
