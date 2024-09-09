@@ -1,9 +1,17 @@
+#include<iostream>
+using namespace std;
+
 int main(){
-  int TR;
-  int salary;
-  int hours;
-  int perhour;
-  int results;
-  totalsalary = (hours*perhour);
-  results = (totalsalary%TR)
-  if results = 
+int num1;
+float taxrate;
+float salary;
+float tax;
+printf("enter current salary");
+scanf("%f", &salary);
+printf("enter current tax rate");
+scanf("%f", &taxrate);
+tax = (salary * taxrate);
+printf("the total tax on your salary is %f", tax);
+
+return 0;
+}
