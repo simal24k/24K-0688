@@ -1,8 +1,7 @@
-#include<iostream>
-using namespace std;
+#include<stdio.h>
 
 int main(){
-int fuelaverage;
+float fuelaverage;
 int distance;
 float price1;
 float price2;
@@ -11,8 +10,8 @@ float totallitre;
 price1 = 118;
 price2 = 123;
 distance = 1207;
-printf("enter car fuel average");
-scanf("%d",&fuelaverage);
+printf("enter car fuel average: ");
+scanf("%f",&fuelaverage);
 
 if ( fuelaverage > 0) {
 totalprice = (((distance/fuelaverage)*price1) + ((distance/fuelaverage)*price2));
