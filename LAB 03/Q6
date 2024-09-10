@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main(){
+int x1;
+int x2;
+int y1;
+int y2;
+int m;
+int my;
+int mx;
+printf("First pair of coordinates: ");
+printf("\nEnter the x-coordinate: ");
+scanf("%d",&x1);
+printf("Enter the y-coordinate: ");
+scanf("%d", &y1);
+printf("\nSecond pair of coordinates:  ");
+printf("\nEnter the x-coordinate: ");
+scanf("%d",&x2);
+printf("Enter the y-coordinate: ");
+scanf("%d", &y2);
+my = (y2-y1);
+mx = (x2-x1);
+m = (my/mx);
+printf("\n The gradient is %d",m);
+
+return 0;
+}
