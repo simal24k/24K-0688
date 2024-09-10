@@ -1,17 +1,18 @@
-#include<iostream>
-using namespace std;
+#include<stdio.h>
 
 int main(){
 int num1;
 float taxrate;
 float salary;
+float remainder;
 float tax;
-printf("enter current salary");
+printf("Enter current salary: ");
 scanf("%f", &salary);
-printf("enter current tax rate");
+printf("Enter current tax rate: ");
 scanf("%f", &taxrate);
 tax = (salary * taxrate);
-printf("the total tax on your salary is %f", tax);
-
+remainder = (salary - tax);
+printf("The total tax on your salary is %f", tax);
+printf("\nYour remaining salary is %f", remainder);
 return 0;
 }
