@@ -1,1 +1,30 @@
+#include<stdio.h>
 
+int main(){
+float SI;
+float principle;
+float ROI;
+float timeperiod;
+printf("Enter principle value: ");
+scanf("%f",&principle);
+if ((principle > 100) && (principle < 100000)){
+	printf("Enter rate of interest: ");
+    scanf("%f",&ROI);
+    if ((ROI > 5) && (ROI < 10)){
+    	printf("Enter time period: ");
+        scanf("%f",&timeperiod);
+        if ((timeperiod > 1) && (timeperiod < 10)){
+        	SI = ((timeperiod*ROI*principle)/100);
+        	printf("your total interest is %f", SI);
+        }
+        else 
+        {printf("incorrect time period entry, please try again");}
+    }
+    else 
+    {printf("incorrect rate of interest entry, please try again");}
+}
+else
+{printf("incorrect principle entry, please try again");}
+
+return 0;
+}
