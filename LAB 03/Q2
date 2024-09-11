@@ -1,13 +1,16 @@
 #include<stdio.h>
 
-int main(){
-int num1;
-int num2;
-printf("Enter first number: ");
-scanf("%d", &num1);
-printf("Enter second number: ");
-scanf("%d", &num2);
-printf("Now number 1 is %d and number 2 is %d",num2,num1);
+int main() {
+  int  num1, num2, c;
+  printf("Enter a number: ");
+  scanf("%d", &num1);
+  printf("Enter another number: ");
+  scanf("%d", &num2);
+  c = num2;
+  num2 = num1;
+  num1 = c;
+
+  printf("first number = %d\nsecond number = %d", num1, num2);
 
 return 0;
 }
