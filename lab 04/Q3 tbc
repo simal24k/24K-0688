@@ -1,30 +1,27 @@
 #include<stdio.h>
 int main(){
-int num1;
-int num2;
+float num1;
+float num2;
 char opp;
-int sum;
-int sub;
-int div;
-int mult;
+float result;
 printf("Enter first number: ");
-scanf("%d", &num1);
+scanf("%f", &num1);
 printf("Enter second number: ");
-scanf("%d", &num2);
-printf("Enter opperator: ");
-scanf("%c", &opp);
+scanf("%f", &num2);
+printf("Enter operator: ");
+scanf(" %c", &opp);
 if (opp == '+'){
-	sum = (num1 + num2);
-	printf("Your answer is", sum);}
-if (opp == '-'){
-	sub = (num2 - num1);
-	printf("Your answer is", sub);}
-if (opp == '*'){
-	mult = (num1 * num2);
-	printf("Your answer is", mult);}
-if (opp == '/'){
-	div = (num1/num2);
-	printf("Your answer is", div);}
+	result = (num1 + num2);
+	printf("Your answer is %f", result);}
+else if (opp == '-'){
+	result = (num1 - num2);
+	printf("Your answer is %f", result);}
+else if (opp == '*'){
+	result = (num1 * num2);
+	printf("Your answer is %f", result);}
+else if (opp == '/'){
+	result = (num1/num2);
+	printf("Your answer is %f", result);}
 else
 {printf("Invalid entry");}
 return 0;
