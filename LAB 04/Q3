@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main(){
+float num1;
+float num2;
+char opp;
+float result;
+printf("Enter first number: ");
+scanf("%f", &num1);
+printf("Enter second number: ");
+scanf("%f", &num2);
+printf("Enter operator: ");
+scanf(" %c", &opp);
+if (opp == '+'){
+	result = (num1 + num2);
+	printf("Your answer is %f", result);}
+else if (opp == '-'){
+	result = (num1 - num2);
+	printf("Your answer is %f", result);}
+else if (opp == '*'){
+	result = (num1 * num2);
+	printf("Your answer is %f", result);}
+else if (opp == '/'){
+	result = (num1/num2);
+	printf("Your answer is %f", result);}
+else
+{printf("Invalid entry");}
+return 0;
+}
