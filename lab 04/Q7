@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main(){
+char name[50];
+float total;
+float newtotal;
+float unitscon;
+float unitprice;
+float surcharge;
+int ID;
+printf("Enter your name: ");
+scanf("%s", &name);
+printf("Enter your ID: ");
+scanf("%d", &ID);
+printf("Enter units consumed: ");
+scanf("%f", &unitscon);
+	if ((unitscon < 199) && (unitscon >= 0)){
+	unitprice = 16.20;
+	total = (unitscon*unitprice);}
+	else if ((unitscon >= 200) && (unitscon < 300)){
+		unitprice = 20.10;
+	    total = (unitscon*unitprice);}
+	else if ((unitscon >= 300) && (unitscon < 500)){
+		unitprice = 27.10;
+	    total = (unitscon*unitprice);}
+	else if (unitscon >= 500){
+		unitprice = 35.90;
+	    total = (unitscon*unitprice);}
+	else {
+		printf("Invalid units entered");
+	}
+	if (total > 18000){
+		surcharge = (total*0.15);
+		newtotal = (surcharge+newtotal);
+		printf("Customer ID: %d \nCustomer name: %s \nUnits Consumed: %.2f \nAmount Charges @Rs.%.2f per unit: %.2f \nSurcharge Amount: %.2f \nNet Amount Paid by the Customer: %.2f", ID, name, unitscon, unitprice, total, surcharge, newtotal);}
+	else 
+	{	surcharge = 0;
+	    newtotal = (surcharge+newtotal);
+	    printf("Customer ID: %d \nCustomer name: %s \nUnits Consumed: %.2f \nAmount Charges @Rs.%.2f per unit: %.2f \nSurcharge Amount: %.2f \nNet Amount Paid by the Customer: %.2f", ID, name, unitscon, unitprice, total, surcharge, newtotal);}	
+return 0;
+}
