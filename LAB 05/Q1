@@ -11,7 +11,7 @@ scanf("%f", &Calories);
 if (FG > 0){ 
   if (Calories > 0){
       CF = (FG*9);
-      if (CF < Calories){
+      if (CF <= Calories){
       Percent = ((CF/Calories)*100);
       printf("Percentage of calories that come from fat: %.2f", Percent);}
       else {printf("Number of calories from fat cannot be greater than the total number of calories");}
@@ -24,3 +24,5 @@ else
 return 0;
 
 }
+
+
