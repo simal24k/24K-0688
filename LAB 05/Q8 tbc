@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main(){
+char roll_number[7];
+int roll_year;
+int sem_num;
+char sec;
+printf("Enter your roll number: ");
+scanf("%s",&roll_number);
+roll_year = (24-(roll_number/100));
+sem_num = (((roll_number%10000)-(roll_number%1000))/10000);
+sec = 'A' + (sec_num - 1);
+switch(roll_year){
+//Assume only fall semesters here
+	case 0:
+		printf("Semester = 1st \nSection: %c",sec);
+	break;
+	case 1:
+		printf("Semester = 3rd \nSection: %c",sec);
+	break;
+	case 2:
+		printf("Semester = 5th \nSection: %c",sec);
+	break;
+	case 3:
+		printf("Semester = 7th \nSection: %c",sec);
+	break;
+	case 4:
+		printf("Semester of extended year = 1st \nSection: %c",sec);
+	break;
+	default: 
+	    printf("Invalid Entry");
+}
+}
