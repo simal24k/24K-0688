@@ -8,7 +8,7 @@ printf("Enter your roll number: ");
 scanf("%s",&roll_number);
 adm_year = ((roll_number[0] - '0') * 10) + (roll_number[1] - '0'); 
 roll_year = (24-adm_year);
-sec_num = roll_number[5]-'0';
+sec_num = roll_number[4]-'0';
 sec = 'A' + (sec_num - 1);
 //Assume only fall semesters here
 	(roll_year == 0) ? printf("Registration Year = 2024 \nSemester = 1st \nSection: %c",sec):
