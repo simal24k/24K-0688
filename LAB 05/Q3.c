@@ -35,9 +35,6 @@ switch(dobcup){
 	else if(coftype == 'B'){
 		printf("Put water: %.2f mins \nSugar: %.2f mins \nMix well: %.2f mins \nAdd Coffee: %.2f mins \nAdd Milk: %.2f mins \nMix well: %.2f mins", (bwater*1.5),(bsugar*1.5),(bmix1*1.5),(bcof*1.5),(bmilk*1.5),(bmix2*1.5));
 		}
-	else if ((coftype != 'B') && (coftype != 'W')){ 
-	printf("Invalid Entry- Coffee Type");
-	}
 	break;
 
 	}
