@@ -7,8 +7,16 @@ int dobcup;
     
 printf("'B' for Black \n'W' for White \nPlease select coffee type: ");
 scanf("%c", &coftype);
+if ((coftype != 'B') && (coftype != 'W')){ 
+	printf("Invalid Entry- Coffee Type");
+	}
+else{
 printf("'1' for Double \n'0' for not Double \nPlease select cup size: ");
 scanf("%d", &dobcup);
+  if ((dobcup != 0) && (dobcup != 1)){ 
+	printf("Invalid Entry- Double Cup");
+	}
+   else{
 printf("'Y' for Yes \n'N' for No \nIs your coffee manual? ");
 scanf(" %c", &manual);
 switch(dobcup){
@@ -19,9 +27,6 @@ switch(dobcup){
 	else if(coftype == 'B'){
 		printf("Put water: %.2f mins \nSugar: %.2f mins \nMix well: %.2f mins \nAdd Coffee: %.2f mins \nAdd Milk: %.2f mins \nMix well: %.2f mins", bwater,bsugar,bmix1,bcof,bmilk,bmix2);
 		}
-	else if ((coftype != 'B') && (coftype != 'W')){ 
-	printf("Invalid Entry- Coffee Type");
-	}
 	break;
 	case 1:
 	if(coftype == 'W'){
@@ -34,8 +39,9 @@ switch(dobcup){
 	printf("Invalid Entry- Coffee Type");
 	}
 	break;
-	default:
-        printf("Invalid Entry- Double Cup");
-	}  
+
+	}
+}
+}
 return 0;
 }
