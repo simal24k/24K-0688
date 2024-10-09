@@ -1,21 +1,21 @@
+//The do-while loop would be best for user input
 #include <stdio.h>
 
 int main() {
     int input;
     int sum = 0;
 
-    // Continue looping until the user enters 0
     do{
     	printf("Enter a number (0 to stop): ");
         scanf("%d", &input); 
         if (input == 0) {
-            break; // Exit the loop if the input is 0
+            break;
         }
 
-        sum = sum + input; // Add the input to the sum
-        printf("Current sum: %d\n", sum); // Print the current sum
+        sum = sum + input; 
+        printf("Current sum: %d\n", sum); 
     }
     while(input!=0);
-    printf("Final sum: %d\n", sum); // Print the final sum
+    printf("Final sum: %d\n", sum); 
     return 0;
 }
