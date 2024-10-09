@@ -1,1 +1,21 @@
+#include <stdio.h>
 
+int main() {
+    int input;
+    int sum = 0;
+
+    // Continue looping until the user enters 0
+    do{
+    	printf("Enter a number (0 to stop): ");
+        scanf("%d", &input); 
+        if (input == 0) {
+            break; // Exit the loop if the input is 0
+        }
+
+        sum = sum + input; // Add the input to the sum
+        printf("Current sum: %d\n", sum); // Print the current sum
+    }
+    while(input!=0);
+    printf("Final sum: %d\n", sum); // Print the final sum
+    return 0;
+}
