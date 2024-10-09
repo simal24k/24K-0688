@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+
+int i, j;
+char a;
+
+for(i=1; i<=15; i++) {
+    if(i<=5) {
+  j = i;
+}
+else if(i>5 && i<=10){
+  j = i-5;   
+}
+else {
+  j = i-10;
+}
+
+a = 'A' + (j-1);
+
+if(j==1){
+  printf("%c  %c  %c  %c  %c\n",a,'A'+1,'A'+2,'A'+3,'A'+4);
+}
+else if(j==5){  
+  printf("%c  %c  %c  %c  %c\n",'A'+4,'A'+5,'A'+6,'A'+7,'A'+8);
+}
+else if(j==2){
+  printf("   %c     %c\n",'A'+2,'A'+5);
+}
+else if(j==3){
+  printf("      %c         \n",'A'+4);
+}
+else if(j==4){
+  printf("   %c     %c\n",'A'+4,'A'+7);
+}
+
+if(i%5==0)
+  printf("\n");
+}
+
+return 0;
+}
