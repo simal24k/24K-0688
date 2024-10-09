@@ -9,10 +9,10 @@ printf("Enter a number: ");
 scanf("%d", &input);
   num1 = input;
  while (num1 > 0){
-        digit = num1 % 10; // last digit
+        digit = num1 % 10; 
         d = digit*digit*digit;
         sum = (sum + d); 
-        num1 = num1/10; // removing last digit
+        num1 = num1/10;
     }
 if (sum==input){
 	printf("Yes it is Armstrong number");
