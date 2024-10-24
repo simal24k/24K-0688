@@ -30,5 +30,5 @@ int main() {
 		}}
 	printf("a = %d e = %d i = %d o = %d u = %d", roundA, roundE, roundI, roundO, roundU);
 return 0;
-    }
+}
 
