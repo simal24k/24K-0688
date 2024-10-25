@@ -6,12 +6,13 @@ int main() {
     int len = 0;
 
     printf("Enter a string: ");
-    gets(str);
 
+    scanf("%99s", str);  
     startPtr = str;
     while (*(startPtr + len) != '\0') {
         len++;
     }
+
     printf("Length: %d\n", len);
 
     endPtr = str + len - 1;
@@ -26,6 +27,9 @@ int main() {
     }
 
     printf("Reversed string: %s\n", str);
+
+    return 0;
+}
 
     return 0;
 }
