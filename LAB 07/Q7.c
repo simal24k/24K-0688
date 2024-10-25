@@ -3,43 +3,38 @@
 int main() {
     int size;
 
-    printf("Enter array size = ");
+    printf("Enter the size of the array: ");
     scanf("%d", &size);
 
-    int arr[100];
-    int seen[100] = {0};
-    int duplicates[100];
-    int duplicateCount = 0;
-
+    int numbers[size], repeattime[size]; 
     for (int i = 0; i < size; i++) {
-        printf("Element %d = ", i + 1);
-        scanf("%d", &arr[i]);
+        repeattime[i] = 0; 
+    }
+
+    printf("Enter %d integers:\n", size);
+    for (int i = 0; i < size; i++) {
+        scanf("%d", &numbers[i]);
     }
 
     for (int i = 0; i < size; i++) {
-        if (seen[arr[i]] == 1) {
-            int alreadyRecorded = 0;
-            for (int j = 0; j < duplicateCount; j++) {
-                if (duplicates[j] == arr[i]) {
-                    alreadyRecorded = 1;
-                    break;
+        if (repeattime[i] == 0) { 
+            int count = 1; 
+            
+            for (int j = i + 1; j < size; j++) {
+                if (numbers[i] == numbers[j]) {
+                    count++;
+                    repeattime[j] = -1; 
                 }
             }
-            if (alreadyRecorded != 1) {
-                duplicates[duplicateCount++] = arr[i];
-            }
+            repeattime[i] = count;
         }
-        seen[arr[i]] = 1;
     }
 
-    if (duplicateCount > 0) {
-        printf("Numbers occurring more than once: ");
-        for (int i = 0; i < duplicateCount; i++) {
-            printf("%d ", duplicates[i]);
+    printf("\nNumbers occurring more than once:\n");
+    for (int i = 0; i < size; i++) {
+        if (repeattime[i] > 1) {
+            printf("%d occurs %d times\n", numbers[i], repeattime[i]);
         }
-        printf("\n");
-    } else {
-        printf("No duplicates found.\n");
     }
 
     return 0;
