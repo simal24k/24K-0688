@@ -1,28 +1,43 @@
 #include <stdio.h>
 
-int main() {
-    int matrix[3][3];
-    int i, j;
+int main()
+{
+    int n, start;
+    printf("Enter the number of pairs: ");
+    scanf("%d", &n);
+    printf("Enter the starting number: ");
+    scanf("%d", &start);
 
-    // Asking for user input
-    printf("Enter the elements of the 3x3 matrix:\n");
-    for (i = 0; i < 3; i++) {
-        for (j = 0; j < 3; j++) {
-            printf("Enter element [%d][%d]: ", i + 1, j + 1);
-            scanf("%d", &matrix[i][j]);
+    int arr[2][n][2];
+    int roundOdd = 0, roundEven = 0;
+
+    for (int i = start; roundOdd < n || roundEven < n; i--)
+    {
+        if (i % 2 == 0 && roundEven < n)
+        {
+            arr[0][roundEven][0] = i;
+            arr[0][roundEven][1] = i - 2;
+            roundEven++;
+        }
+        else if (i % 2 != 0 && roundOdd < n)
+        {
+            arr[1][roundOdd][0] = i;
+            arr[1][roundOdd][1] = i - 2;
+            roundOdd++;
         }
     }
 
-    // Displaying the matrix
-    printf("\nThe 3x3 matrix is:\n");
-    for (i = 0; i < 3; i++) {
-        for (j = 0; j < 3; j++) {
-            printf("%d ", matrix[i][j]);
-        }
-        printf("\n"); 
-    
+    printf("Even numbers:\n");
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d %d\n", arr[0][i][0], arr[0][i][1]);
     }
-    
+
+    printf("Odd numbers:\n");
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d %d\n", arr[1][i][0], arr[1][i][1]);
+    }
 
     return 0;
 }
