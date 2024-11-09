@@ -1,3 +1,4 @@
+//works on dev C++
 #include<stdio.h>
 #include<string.h>
 void Palindrome_check( char array[5][20]);
