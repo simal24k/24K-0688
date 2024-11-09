@@ -1,26 +1,28 @@
-#include<stdio.h>
+#include <stdio.h>
 
-void Calculator(char array[3]);
-int main(){
-  int i;
-  int array[3];
+void Calculator(int num1, int num2, char operator);
 
+int main() {
+    int array[2];
+    char operator;
 
-  for(i=0;i<2;i++){
-  printf("\nEnter integer %d: ",i+1);
-  scanf(" %c", &array[i]);}
-  printf("\nEnter operator: ");
-  scanf(" %c", &array[2]);	
-  void Calculator(char array[3]);
-   return 0;
+    for (int i = 0; i < 2; i++) {
+        printf("\nEnter integer %d: ", i + 1);
+        scanf("%d", &array[i]);
+    }
+
+    printf("\nEnter operator: ");
+    scanf(" %c", &operator);
+
+    Calculator(array[0], array[1], operator);
+
+    return 0;
 }
 
-void Calculator(char array[3]){
-	int num1, num2;
-	num1 = array[0] - '0';
-	num2 = array[1] - '0';
-    (array[2] == '+')? printf("Result = %d", num1+num2): (array[2]== '-')? 
-    printf("Result = %d", num1-num2): (array[2] == '*')? printf("Result = %d", num1*num2):
-    (array[2] == '/')? printf("Result = %d", num1/num2): printf("Incorrect opperation");
+void Calculator(int num1, int num2, char operator) {
+    (operator == '+') ? printf("Result = %d\n", num1 + num2) :
+    (operator == '-') ? printf("Result = %d\n", num1 - num2) :
+    (operator == '*') ? printf("Result = %d\n", num1 * num2) :
+    (operator == '/') ? printf("Result = %d\n", num1 / num2) :
+    printf("Incorrect operation\n");
 }
-    
