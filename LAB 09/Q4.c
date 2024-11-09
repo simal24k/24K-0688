@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-void Calculator(int num1, int num2, char operator);
+void Calculator(int num1, int num2, char opp);
 
 int main() {
     int array[2];
-    char operator;
+    char opp;
 
     for (int i = 0; i < 2; i++) {
         printf("\nEnter integer %d: ", i + 1);
@@ -12,17 +12,17 @@ int main() {
     }
 
     printf("\nEnter operator: ");
-    scanf(" %c", &operator);
+    scanf(" %c", &opp);
 
-    Calculator(array[0], array[1], operator);
+    Calculator(array[0], array[1], opp);
 
     return 0;
 }
 
-void Calculator(int num1, int num2, char operator) {
-    (operator == '+') ? printf("Result = %d\n", num1 + num2) :
-    (operator == '-') ? printf("Result = %d\n", num1 - num2) :
-    (operator == '*') ? printf("Result = %d\n", num1 * num2) :
-    (operator == '/') ? printf("Result = %d\n", num1 / num2) :
+void Calculator(int num1, int num2, char opp) {
+    (opp == '+') ? printf("Result = %d\n", num1 + num2) :
+    (opp == '-') ? printf("Result = %d\n", num1 - num2) :
+    (opp == '*') ? printf("Result = %d\n", num1 * num2) :
+    (opp == '/') ? printf("Result = %d\n", num1 / num2) :
     printf("Incorrect operation\n");
 }
